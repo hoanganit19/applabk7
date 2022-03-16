@@ -1,0 +1,29 @@
+//Thiết lập transition cho các thành phần cần thiết
+@mixin transition($property, $duration) {
+    transition: $duration ease;
+    transition-property: $property;
+}
+
+//Thiết lập secion mặc định
+
+@mixin section {
+    padding: 77px 0;
+    
+    @media screen and (max-width: 1200px) {
+        padding: 30px 0;
+    }
+}
+
+@mixin sectionCustom($paddingX, $paddingY) {
+    padding: $paddingX $paddingY;
+}
+
+@mixin headding {
+    color: $primaryColor;
+    font-weight: bold;
+}
+
+@mixin center($width) {
+    max-width: $width;
+    margin: 0 auto;
+}
